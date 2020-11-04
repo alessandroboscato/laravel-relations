@@ -11,8 +11,14 @@ class AuthorsTableSeeder extends Seeder
      *
      * @return void
      */
-    public function run()
+    public function run(Faker $faker)
     {
-        //
+      for ($i = 0; $i<5; $i++) {
+        $newAuthor = new Author;
+        $newAuthor->name = $faker->firstName;
+        $newAuthor->lastname = $faker->lastName;
+        $newAuthor->date_of_birth = $faker->date;
+        $newAuthor->save();
+      }  
     }
 }
