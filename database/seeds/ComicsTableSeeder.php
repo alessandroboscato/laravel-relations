@@ -18,7 +18,6 @@ class ComicsTableSeeder extends Seeder
 
         $newComic = new Comic;
         $newComic->title = $faker->text(30);
-        $newComic->author = $faker->name(50);
         $newComic->editor = $faker->company(50);
         $newComic->edition = $faker->sentence(3);
         $newComic->year = $faker->year('now');

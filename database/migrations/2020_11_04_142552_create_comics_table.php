@@ -16,7 +16,8 @@ class CreateComicsTable extends Migration
         Schema::create('comics', function (Blueprint $table) {
             $table->id();
             $table->string('title', 30);
-            $table->foreignId("author_id")->constrained();
+            $table->foreignId("author_id")->nullable();
+            $table->foreign('author_id')->references('id')->on('authors');
             $table->string('editor', 50);
             $table->string('edition', 100);
             $table->year('year');
