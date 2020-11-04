@@ -16,7 +16,7 @@
             <img class="card-img-top" src="{{$comic->cover}}" alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">{{$comic->title}}</h5>
-              <h5 class="card-title">{{$comic->author}}</h5>
+              <h5 class="card-title">{{$comic->author->name}} {{$comic->author->lastname}}</h5>
               <p class="card-text">{{$comic->text}}</p>
               <a href="#" class="btn btn-primary">Show more</a>
             </div>
